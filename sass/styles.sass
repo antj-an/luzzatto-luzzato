@@ -1,0 +1,2182 @@
+@import "vars"
+
+body
+	font-size: 16px
+	min-width: 320px
+	font-family: 'PT Sans Narrow'
+	overflow-x: hidden
+	letter-spacing: 0.003em
+	color: #282f35
+	background: #fffde7
+	input, textarea
+		outline: none
+		width: 100%
+
+b, strong
+	font-weight: bold
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+.flex
+	display: flex
+
+.form-wrap
+	form
+		width: 100%
+		.input,
+		.btn
+			font-family: 'PT Sans Narrow'
+			font-size: 25px
+			color: #577a8d
+			height: 68px
+			border-radius: 20px
+			padding: 0 30px
+			border: none
+		.input,
+		textarea
+			background: #fefefe
+		textarea
+			font-size: 25px
+			font-family: 'PT Sans Narrow'
+			padding: 26px
+			color: #577a8d
+			resize: none
+			border: none
+			height: 285px
+			border-radius: 20px
+		.btn
+			text-align: center
+			background-color: #ee463a
+			color: #fff
+			transition: all .5s
+			&:hover
+				background: darken(#ee463a, 10%)
+				box-shadow: 0px 0px 7px #ed4539
+
+.meet-wrap .btn,
+.aside-cf button
+	&:hover
+		background: darken(#ee463a, 10%)
+		box-shadow: 0px 0px 7px #ed4539
+
+input::-webkit-input-placeholder 
+  text-align: start
+  opacity: 1
+  color: #577a8d
+  -webkit-transition: 0.3s ease-in-out 0.3s
+  -o-transition: 0.3s ease-in-out 0.3s
+  transition: 0.3s ease-in-out 0.3s
+
+input:-ms-input-placeholder 
+  text-align: start
+  opacity: 1
+  color: #577a8d
+  -webkit-transition: 0.3s ease-in-out 0.3s
+  -o-transition: 0.3s ease-in-out 0.3s
+  transition: 0.3s ease-in-out 0.3s
+
+input::-moz-placeholder 
+  text-align: start
+  opacity: 1
+  color: #577a8d
+  -webkit-transition: 0.3s ease-in-out 0.3s
+  -o-transition: 0.3s ease-in-out 0.3s
+  transition: 0.3s ease-in-out 0.3s
+
+textarea::-webkit-input-placeholder 
+  text-align: start
+  opacity: 1
+  color: #577a8d
+  -webkit-transition: 0.3s ease-in-out 0.3s
+  -o-transition: 0.3s ease-in-out 0.3s
+  transition: 0.3s ease-in-out 0.3s
+
+textarea:-ms-input-placeholder 
+  text-align: start
+  opacity: 1
+  -webkit-transition: 0.3s ease-in-out 0.3s
+  -o-transition: 0.3s ease-in-out 0.3s
+  transition: 0.3s ease-in-out 0.3s
+
+textarea::-moz-placeholder 
+  text-align: start
+  opacity: 1
+  -webkit-transition: 0.3s ease-in-out 0.3s
+  -o-transition: 0.3s ease-in-out 0.3s
+  transition: 0.3s ease-in-out 0.3s
+
+textarea:focus::-webkit-input-placeholder 
+  opacity: 0
+
+textarea:focus:-ms-input-placeholder 
+  opacity: 0
+
+textarea:focus::-moz-placeholder 
+  opacity: 0
+
+input:focus::-webkit-input-placeholder
+  opacity: 0
+
+input:focus:-moz-placeholder
+  opacity: 0
+
+input:focus::-moz-placeholder
+  opacity: 0
+
+input:focus:-ms-input-placeholder
+  opacity: 0
+
+.clip-container
+	bottom: 0
+	clip-path: url(#video-clip-path)
+	left: 0
+	position: absolute
+	right: 0
+	top: 0
+
+.video-clip-svg
+	height: 0
+	position: absolute
+	width: 0
+
+.sr-only
+	position: absolute
+	width: 1px
+	height: 1px
+	padding: 0
+	margin: -1px
+	overflow: hidden
+	clip: rect(0, 0, 0, 0)
+	border: none
+
+.header
+	.menu-expand
+		position: relative
+		display: none
+		cursor: pointer
+		background-color: transparent
+		border: none
+		outline: none
+		width: 20px
+		min-width: 20px
+		height: 14px
+		span
+			display: block
+			position: absolute
+			background-color: #000
+			border-radius: 0
+			left: 0
+			transform: rotate(0deg)
+			transition: .4s ease-in-out
+			width: 100%
+			height: 2px
+			&:nth-child(1)
+				top: 0
+			&:nth-child(2),
+			&:nth-child(3)
+				top: 6px
+				will-change: transform
+			&:nth-child(4)
+				top: 12px
+
+.menu-expand.on span:nth-child(1)
+	top: 5px
+	width: 0
+	left: 50%
+	transition: none
+.menu-expand.on span:nth-child(2)
+	transform: rotate(45deg)
+.menu-expand.on span:nth-child(3)
+	transform: rotate(-45deg)
+.menu-expand.on span:nth-child(4)
+	top: 10px
+	width: 0
+	left: 50%
+	transition: none
+
+.menu-for-mob
+	width: 400px
+	position: fixed
+	background: #fffde7
+	top: 0
+	left: 0
+	bottom: 0
+	padding: 110px 30px 30px
+	overflow: hidden
+	transform: translateX(-100%)
+	transition: all .5s ease
+	align-items: center
+	overflow: auto
+
+.menu-for-mob.showMenu
+	position: fixed
+	flex-direction: column
+	justify-content: space-between
+	align-items: flex-start
+	box-shadow: -15px 125px 50px 0px rgba(0, 0, 0, 0.24)
+	ul 
+		flex-direction: column
+		margin-bottom: 30px
+		li
+			margin-inline-start: 0
+	.header-social
+
+		display: flex
+		align-items: baseline
+		margin: 0 -7px
+		a
+			margin: 0 7px
+	.header-phone
+		display: block
+
+
+
+
+
+
+.wrapper
+	width: 100%
+	min-width: 100%
+	max-width: 100%
+	min-height: 100vh
+	margin: 0 auto
+	position: relative
+
+.header
+	position: relative
+	font-size: 17px
+	padding-top: 37px
+	padding-bottom: 50px
+	background: #fffde7
+
+
+.header-wrapper
+	width: 100%
+	max-width: 1668px
+	padding: 0 30px
+	margin: 0 auto
+
+.header-inner
+	align-items: center
+	justify-content: space-between
+	position: relative
+	z-index: 8
+
+.header-logo
+	display: flex
+	flex-grow: .1
+	margin-inline-end: 12px
+	a
+		img
+			display: block
+			width: 194px
+			height: auto
+			flex-shrink: 0
+
+.header-nav
+	flex-grow: 2
+
+.header-additional-menu
+	display: flex
+	align-items: center
+	margin: 0 0 0 auto
+	>*
+		margin-inline-start: 20px
+
+.header-nav
+	ul
+		flex-wrap: wrap
+		li
+			margin-inline-start: 14px
+			display: flex
+			align-items: center
+			a
+				letter-spacing: 0.2em
+				text-transform: uppercase
+				white-space: nowrap
+				&:hover
+					color: #ee463a
+			&:after
+				content: ''
+				display: inline-block
+				background: #000
+				width: 1px
+				height: 14px
+				margin-inline-start: 14px
+
+.current-menu-item
+	a
+		color: #ee463a
+
+.header-lang-select
+	a
+		color: #989898
+		font-family: 'Assistant'
+		font-size: 25px
+		letter-spacing: 0.016em
+
+.header-social
+	display: flex
+	align-items: flex-end
+	a
+		margin: 0 4px
+
+.header-phone a,
+.header-social a,
+.header-lang-select	a
+	&:hover
+		opacity: .7
+
+.header-form-search
+	position: relative
+	.input
+		position: absolute
+		border: 1px solid #333
+		width: 260px
+		height: 27px
+		top: -90%
+		right: 30px
+		margin-top: 25px
+		background: #fffde7
+		border-color: #989898
+		border-radius: 5px
+
+.header-form-search:not(.expanded) .input
+	display: none
+
+.btn-search
+	display: block
+	cursor: pointer
+	color: transparent
+	background: none
+	border: none
+	outline: none
+	border-radius: 0
+	width: 27px
+	height: 27px
+	padding: 0
+	margin: 0
+
+.section-wrapper
+	width: 100%
+	max-width: 1668px
+	margin: 0 auto
+	padding: 0 30px
+
+.s-tabs,
+.s-personnel
+	.section-wrapper
+		max-width: 1920px
+		padding: 0
+
+ul.tabs
+	margin: 0
+	padding: 0
+	list-style: none
+	align-items: flex-end
+	li
+		background: #7c8084
+		font-size: 35px
+		width: 50%
+		padding: 69px 155px 37px
+		cursor: pointer
+		display: inline-table
+		font-family: 'PT Serif'
+		font-weight: bold
+		position: relative
+		letter-spacing: 0.1em
+		box-shadow: 9px -7px 38px 0px rgba(0, 0, 0, 0.24) inset
+		a
+			color: #fff
+			transition: none
+	li.active
+	li.tab-current
+		background: #fffde6
+		box-shadow: 7px -7px 9px 0px rgba(0, 0, 0, 0.11)
+		padding-top: 79px
+		pointer-events: none
+		a
+			color: #ee463a
+			transition: none
+
+.tab-link:nth-child(2):not(.tab-current)
+	border-bottom-left-radius: 20px
+
+.tab-link:nth-child(1):not(.tab-current)
+	border-bottom-right-radius: 20px
+
+.rtl .tab-link:nth-child(2):not(.tab-current)
+	border-bottom-right-radius: 20px
+	border-bottom-left-radius: 0
+
+.rtl .tab-link:nth-child(1):not(.tab-current)
+	border-bottom-left-radius: 20px
+	border-bottom-right-radius: 0
+
+
+.tab-content
+	display: none
+	background: #fffde6
+	padding: 60px 185px 10px
+
+.tab-content.tab-current
+	display: block
+
+
+.tab-content-column
+	margin-bottom: 30px
+	ul
+		list-style-type: disc
+		column-count: 3
+		column-gap: 100px
+		li
+			font-size: 30px
+			color: #444c57
+			&::marker
+				transition: all .3s ease
+			&:hover
+				color: #ee463a
+			a
+				transition: all .3s ease
+				will-change: hover
+				color: #444c57
+				&:hover
+					color: #ee463a
+					font-weight: bold
+
+.s-meet
+	background: #282f35
+	.img-banner
+		height: 196px
+		overflow: hidden
+
+.meet-wrap
+	justify-content: space-between
+	align-items: center
+	padding: 45px 0
+	.btn
+		height: 95px
+		min-width: 645px 
+		font-size: 31px
+		border-radius: 33px
+		padding: 0 30px
+	.h2
+		font-size: 45px
+
+
+
+.h2
+	font-family: 'PT Serif'
+	font-weight: normal
+	color: #fff
+	font-size: 55px
+
+.btn
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	white-space: nowrap
+	min-width: 0
+	text-decoration: none
+	color: #fff
+	background: #ee463a
+
+// .personnel-card-wrap
+// 	overflow-wrap
+// 	.slick-track
+// 		padding: 65px 0
+
+
+.s-personnel
+	background: #282f35
+
+.personnel-card-wrap
+	.personnel-card
+		width: 20%
+
+.personnel-card
+	//width: 20% 
+	position: relative
+	display: flex
+	align-items: flex-end
+	justify-content: center
+	text-decoration: none
+	&:focus
+		outline: none
+
+.personnel-img
+	position: relative
+	transition: all .3s ease
+	
+	img
+		max-width: 100%
+		display: block
+		height: auto
+		object-fit: cover
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		display: block
+		width: 100%
+		height: 100%
+		background: #818181
+		opacity: 0.3
+		transition: all .3s ease
+
+.personnel-info
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	font-family: 'PT Serif'
+	font-weight: normal
+	font-size: 20px
+	color: #fff
+	text-align: center
+	padding: 55px 42px 35px
+	transition: .3s ease
+	opacity: 0 
+.personnel-card:hover
+	z-index: 2
+	box-shadow: 0px -5px 50px 0px rgba(0, 0, 0, 0.69)
+	transition: all .3s ease
+.personnel-card:hover .personnel-img::before
+	opacity: 0
+	box-shadow:inset -4px -75px 75px #000000
+	
+.personnel-card:hover .personnel-img img
+	transition: all .3s ease
+
+.personnel-card:hover .personnel-info
+	opacity: 1
+	background-image: linear-gradient(180deg, rgba(238, 238, 238, 0) 0%, rgba(0, 0, 0, 0.63922) 100%)
+.s-search-inner
+	.select
+		background: #47545e !important
+		color: #fff !important
+
+
+.s-search
+	background: #282f35
+	padding: 45px 0 40px
+	.h2
+		text-align: center
+		margin-bottom: 50px
+	.section-wrapper
+		max-width: 1160px
+	.select
+		width: 100%
+		border: none
+		box-shadow: none
+		padding: 0 30px
+		height: 70px
+		background: #fefefe
+		border-radius: 20px
+		font-size: 25px
+		color: #577a8e
+		&:focus
+			outline: none
+	.SumoSelect
+		width: 100%
+		border: none
+		box-shadow: none
+		.SelectBox
+			padding: 0 30px
+		&>.CaptionCont
+			height: 70px
+			background: #fefefe
+			border-radius: 20px
+			display: flex
+			align-items: center
+			border: none
+			&>span
+				color: #577a8e
+				font-size: 25px	
+			&>label
+				width: 33px
+				right: 24px
+				&>i
+					background-image: url(../img/arrow-down.svg)
+					width: 33px
+					height: 33px
+					opacity: 1
+		&.open
+			&>.optWrapper
+				top: 100%
+				border-radius: 20px
+				&>.options 
+					li.opt
+						padding: 10px 30px
+						font-size: 20px
+						color: #577a8e
+	.SumoSelect.open>.CaptionCont, 
+	.SumoSelect:focus>.CaptionCont, 
+	.SumoSelect:hover>.CaptionCont
+		border: none
+		box-shadow: none
+
+.s-search .SumoSelect.open > .optWrapper
+	border-top-left-radius: 0
+	border-top-right-radius: 0
+	transition: all .1s ease-in-out
+
+.s-search .SumoSelect.open > .CaptionCont
+	border-bottom-left-radius: 0
+	border-bottom-right-radius: 0
+
+
+.search_an_expert
+	.double-input
+		justify-content: center
+		.input-wrap	
+			width: 32%
+		&>div
+			margin-left: 10px
+			margin-right: 10px
+	.triple-input
+			justify-content: space-between
+	.input-wrap
+		width: 32%
+		margin-bottom: 25px
+	.btn-wrap
+		width: 32%
+
+
+.red
+	color: #ee463a
+
+.s-reviews
+	padding-top: 84px
+
+.quotes
+	font-style: italic
+	font-size: 124px
+	color: #f4856d
+	font-family: 'PT Serif'
+	margin: 0 -15px
+
+.review-author
+	font-size: 19px
+	color: #ee463a
+	margin-bottom: 10px
+	margin-top: -90px
+.review-body
+	p
+		margin-bottom: 32px
+		font-size: 24px
+		color: #727476
+		line-height: 1.4
+.review-btn
+	font-size: 31px
+	color: #f4856d
+	width: fit-content
+	&:hover
+		color: #ee463a
+.review
+	width: 42%
+	display: flex
+	padding: 0 10px
+	margin-bottom: 50px
+.review-wrap
+	display: flex
+	flex-direction: column
+	flex-grow: 1
+	justify-content: space-between
+
+.reviews-wrap
+	justify-content: space-between
+	flex-wrap: wrap
+	margin: 44px -10px 0
+
+
+.footer
+	background: #232323
+	font-size: 18px
+	padding-top: 60px
+	padding-bottom: 70px
+	color: #fff
+	.section-wrapper
+		max-width: 1775px
+
+.footer-wrap
+	justify-content: space-between
+	margin: 0 -10px
+
+.footer-social
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.footer-social,
+.footer-menu,
+.footer-form
+	padding: 0 10px
+
+.footer-logo
+	margin-bottom: 60px
+
+.footer-social-logo
+	a
+		margin: 0 10px
+		&:hover
+			opacity: .7
+
+.footer-form
+	width: 41.5%
+	form
+		.input-wrap
+			margin-bottom: 30px
+		.double-input
+			justify-content: space-between
+			.input-wrap
+				width: 47.9%
+		label
+			color: #fff
+			font-size: 20px
+			letter-spacing: 0.26em
+
+.footer-form-title
+	font-size: 28px
+	margin-bottom: 57px
+	letter-spacing: 0.3em
+	text-align: center
+
+.footer-menu-list
+	padding-bottom: 34px
+	border-bottom: 2px solid #7c8084
+	margin-bottom: 32px
+	li
+		a
+			color: #fff
+			letter-spacing: 0.3em
+			text-transform: uppercase
+			&:hover
+				color: #f4856d
+
+.footer-menu-sites
+	letter-spacing: 0.3em
+	.sites-title
+		font-size: 22px
+		font-weight: normal
+	.footer-menu-list
+		border-bottom: none
+		padding-bottom: 0
+		margin-bottom: 0
+		a
+			text-transform: inherit
+			&:hover
+				color: #f4856d
+
+
+.custom-checkbox 
+	position: absolute
+	z-index: -1
+	opacity: 0
+    
+.custom-checkbox+label
+    display: inline-flex
+   	align-items: flex-end
+   	user-select: none
+
+.custom-checkbox+label::before 
+	content: ''
+	display: inline-block
+	width: 20px
+	height: 20px
+	flex-shrink: 0
+	flex-grow: 0
+	border: 1px solid #adb5bd
+	background: #d8d8d8
+	margin-inline-end: 0.5em
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: 50% 50%
+    
+.custom-checkbox:not(:disabled):active+label::before 
+	background-color: #f4856d
+
+.custom-checkbox:checked+label::before 
+	border-color: #f4856d
+	background-color: #f4856d
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    
+.custom-checkbox:disabled+label::before 
+	background-color: #f4856d
+
+.checkbox-wrap
+	margin-bottom: 25px
+
+.s-partners
+	background: #fff
+	height: 240px
+	.h2
+		flex-grow: .5
+	.section-wrapper,
+	.inner-section-wrap
+		height: 100%
+
+.s-partners,
+.s-ranking
+	.h2
+		color: #231f20
+
+.inner-section-wrap
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.partners-slider
+	max-width: 1140px
+
+.partners-slider-wrap 
+	position: relative
+	align-items: baseline
+	.partner-item 
+		&:focus
+			outline: none
+		.item-img-wrap
+			&:focus
+				outline: none
+			a:focus,
+			img:focus
+				outline: none
+
+.s-partners
+	.inner-section-wrap
+		position: relative
+	.prev,
+	.next
+		background-image: url(../img/slider-arrow.svg)
+		background-repeat: no-repeat
+		display: block
+		cursor: pointer
+		transition: .2s
+		background-size: contain
+		background-position: center center
+		width: 16px
+		height: 27px
+		position: absolute
+		z-index: 2
+		top: 45%
+		&:hover
+			opacity: .8
+		&:focus
+			outline: none
+	.prev
+		left: 0
+	.next
+		transform: rotate(180deg)
+		right: 0
+
+.item-img-wrap
+	display: flex
+	justify-content: center
+	img
+		height: auto
+		display: block
+		max-width: 100%
+
+.s-ranking
+	padding: 60px 0 70px
+	.h2
+		margin-bottom: 36px
+
+.r-items-wrap
+	flex-wrap: wrap
+	margin: 0 -7px
+	.r-item
+		margin-bottom: 10px
+		padding: 0 7px
+		width: 12.5%
+		display: flex
+		justify-content: center
+		align-items: center		
+
+.aside-cf-wrap	
+	form .input,
+	form textarea
+		background: #fffde7
+	.input-wrap
+		margin-bottom: 20px
+	form .btn
+		background: #000
+		&:hover
+			background: lighten(#000, 10%)
+
+.aside-cf-body
+	width: 60%
+	max-width: 575px
+	background: #ee463a
+	color: #fffde7
+	padding: 35px 60px 57px 30px
+	z-index: 999
+	position: fixed
+	top: 0
+	left: 0
+	//max-height: 100vh
+	overflow: auto
+	transform: translateX(-575px)
+	transition: all .3s ease
+.aside-cf-block.active .aside-cf-body
+	transform: translateX(0)
+	transition: all .3s ease
+	box-shadow: 9px -7px 38px 0px rgba(0, 0, 0, 0.24)
+.aside-cf-block
+	&::before
+		content: ''
+		position: fixed
+		display: block
+		background: rgba(0, 0, 0, 0.001)
+		left: 0
+		right: 0
+		top: -200px
+		bottom: -200px
+		z-index: 3
+
+.aside-cf-block:not(.active)
+	pointer-events: none
+
+.aside-cf-title
+	font-size: 65px
+	font-family: 'PT Serif'
+	font-weight: normal
+	margin-bottom: 21px
+.aside-cf-text
+	font-size: 25px
+	margin-bottom: 50px
+
+.aside-cf
+	button
+		border: none
+		background: #ee463a
+		color: #fff
+		width: 215px
+		height: 82px
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 22px
+		letter-spacing: 0.1em
+		font-family: 'PT Sans Narrow'
+		border-top-right-radius: 23px
+		border-bottom-right-radius: 23px
+		position: fixed
+		left: 0
+		top: 200px
+		z-index: 3
+		transition: all .5s
+		&:focus
+			outline: none
+
+.footer-menu-title
+	display: none
+	color: #fff
+	font-size: 22px
+	font-weight: normal
+	position: relative
+	letter-spacing: 0.3em
+
+.btn-search:hover
+	opacity: .7
+	transition: all .3s ease
+
+
+.footer-menu-sites
+	.footer-menu-title
+		display: none
+
+.h1
+	font-size: 110px
+	font-family: 'PT Serif'
+	font-weight: normal
+	line-height: .9
+
+.sect-descr
+	font-size: 21px
+	width: 100%
+	padding-right: 47%
+	padding-top: 104px
+	margin-top: -37%
+	padding-left: 18%
+	letter-spacing: 0.005em
+	p
+		min-height: 135px
+
+.s-first-screen
+	position: relative
+	margin-bottom: 65px
+	z-index: 2
+	min-height: 620px
+	.section-wrapper
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+	.h1
+		padding-bottom: 104px
+		width: 100%
+		min-height: 300px
+		display: flex
+		align-items: flex-start
+		flex-direction: column
+		justify-content: flex-end
+.s-first-home-screen
+	.section-wrapper
+		max-width: 1036px
+	.h1
+		padding-left: 46%
+
+
+
+.sect-img-wrap
+	overflow: hidden
+	width: 570px
+	height: 800px
+	margin-top: -37%
+	filter: drop-shadow(10px 10px 15px #00000099)
+	img
+		display: block
+		width: 100%
+		height: 100%
+		object-fit: cover
+		position: relative
+
+
+.inner-main
+	.s-personnel
+		background: #fffde7
+.first-inner-screen-wrap
+	.clip-container
+		position: static
+
+// .aside-cf-body
+// 	height: 100vh
+
+
+
+.s-meet
+	.img-banner
+		img
+			width: 100%
+			height: 100%
+			display: block
+			object-fit: cover
+
+.tab-mob-title
+	display: none
+
+.s-first-inner-screen
+	padding-top: 100px
+	.h1
+		font-size: 76px
+	span.red
+		display: inline-block
+
+.first-inner-screen-wrap
+	display: flex
+	flex-direction: column
+	width: 66%
+
+.s-about-us
+	padding-bottom: 82px
+	margin-top: -20em
+	.entry-content
+		p
+			font-size: 25px
+			margin-bottom: 36px
+
+.s-first-inner-screen
+	.section-wrapper
+		flex-direction: row
+		align-items: flex-start
+		justify-content: space-between
+	.h1
+		padding-inline-start: 22.5%
+		line-height: 1.2
+	.sect-img-wrap
+		margin-top: -32%
+
+.s-internal-menu
+	padding-top: 15px
+	margin-bottom: auto
+	width: 33%
+
+.internal-menu
+	ul
+		&::before
+			content: ''
+			width: 3px
+			background: #ef5246
+			position: absolute
+			left: 0
+			height: 100%
+			top: 5px
+		padding-inline-start: 69px
+		position: relative
+
+		li
+			font-size: 35px
+			font-weight: bold
+			line-height: 1
+			width: fit-content
+			&:hover
+				a
+					color: #ef5246
+			a
+				padding-bottom: 40px
+				display: inline-block
+				position: relative
+
+
+#crl
+	width: 29px
+	height: 29px
+	background: #ef5246
+	border-radius: 50%
+	position: absolute
+	left: 17px
+	top: 4%
+	//left: 0
+	transform: translateY(-50%)
+	display: inline-block
+	transition: .3s ease-in-out
+	padding: 0
+
+
+
+// .internal-menu ul li:nth-child(2):hover ~ #crl
+// 	top: 2.25em
+// .internal-menu ul li:nth-child(3):hover ~ #crl
+// 	top: 4.3em
+// .internal-menu ul li:nth-child(4):hover ~ #crl
+// 	top: 6.4em
+// .internal-menu ul li:nth-child(5):hover ~ #crl
+// 	top: 8.7em
+// .internal-menu ul li:nth-child(6):hover ~ #crl
+// 	top: 10.8em
+// .internal-menu ul li:nth-child(7):hover ~ #crl
+// 	top: 13em
+// .internal-menu ul li:nth-child(8):hover ~ #crl
+// 	top: 15.1em
+.content-wrap
+	flex-wrap: wrap
+	.column
+		width: 50%
+		font-size: 25px
+		text-align: justify
+		p
+			margin-bottom: 44px	
+			line-height: 1.24
+			color: #7c8084
+		&:nth-child(2)
+			padding-inline-start: 7%
+			padding-top: 18%
+.column-img
+	width: 100%
+	margin-top: 135px
+
+.column-img-wrap
+	width: 50%
+	padding-inline-start: 7.1%
+
+.column-img-text
+	font-size: 25px
+	//width: 60%
+	width: 50%
+	h3
+		font-family: 'PT Serif'
+		font-size: 57px
+		font-weight: normal
+		line-height: 1.1
+		color: #47545e
+		margin-bottom: 35px
+		white-space: nowrap
+	.link-descr
+		font-size: 30px
+		font-family: 'PT Serif'
+	p
+		//padding-inline-end: 115px
+		display: inline-block
+		line-height: 1.24
+		text-align: justify
+		
+
+.s-vision
+	.section-wrapper
+		max-width: 1360px
+	.s-title-wrap
+		background: #ee463a
+		padding-top: 35px
+		padding-bottom: 45px
+	.h2
+		font-size: 80px	
+		text-align: center
+		line-height: 0.825
+	.s-text-wrap
+		text-align: center
+		margin-top: 63px
+		margin-bottom: 84px
+		p
+			font-size: 38px
+			margin-bottom: 16px
+
+.s-values
+	.s-title-wrap
+		background: #282f35
+		padding-top: 44px
+		padding-bottom: 16px
+		.section-wrapper
+			max-width: 1668px
+			padding: 0 30px
+	.h2
+		font-size: 65px
+	.section-wrapper
+		max-width: 1920px
+		padding: 0
+
+.value-title
+	font-family: 'PT Serif'
+	font-size: 113px
+	margin-bottom: 24px
+.value-descr
+	font-size: 40px
+.value-content
+	padding-inline-start: 149px
+	padding-inline-end: 181px
+.value-content
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+.value-img-wrap,
+.value-content
+	width: 50%
+
+.s-value-item
+	&:nth-child(even)
+		flex-direction: row-reverse
+		.value-content
+			padding-inline-start: 90px
+			padding-inline-end: 310px
+
+
+.s-dark
+	background: #47545e
+	.quotes
+		color: #ee463a
+	.review-author
+		color: #fffde7
+	.review-body p
+		color: #fff
+	.review-btn
+		color: #989898
+		&:hover
+			color: #ee463a
+
+.s-ranking-inner
+	.r-items-wrap 
+		.r-item
+			width: 23%
+			margin-bottom: 75px
+			img
+				margin-bottom: 15px
+
+.s-ranking-inner .r-items-wrap .r-item:not(:nth-child(3n+1))
+	margin-inline-start: 15%
+.r-item-title
+	font-weight: bold
+	font-size: 35px
+	margin-bottom: 17px
+.r-item-descr
+	font-size: 25px
+
+.s-search-inner
+	background: inherit
+	padding-bottom: 145px
+	.h1
+		color: #e2211c
+		letter-spacing: 0.04em
+		margin-bottom: 35px
+		text-align: center
+	.form-wrap form .input, 
+	.form-wrap form textarea
+		background: #47545e
+		color: #fff
+	input::-webkit-input-placeholder 
+		color: #fff
+	input:-ms-input-placeholder 
+  		color: #fff
+	input::-moz-placeholder 
+		color: #fff
+	.SumoSelect > .CaptionCont
+		background: #47545e
+	.SumoSelect > .CaptionCont > span
+		color: #fff
+	.SumoSelect > .CaptionCont > label > i
+		background-image: url(../img/arrow-down-w.svg)
+
+	.search-descr
+		font-size: 25px
+		text-align: center
+		color: #727476
+		margin-bottom: 58px
+
+
+.experts-wrap
+	flex-wrap: wrap
+	margin-bottom: 18px
+.s-experts
+	.h2
+		text-align: center
+		margin-bottom: 53px
+	.expert-item
+		width: 24%
+		margin-bottom: 40px
+		transition: all .3s ease
+		&:not(:nth-child(4n+1))
+			margin-inline-start: 1.3%
+		&:hover 
+			.expert-item-info
+				color: #ee463a
+			.expert-item-img img
+				transform: scale(1.03)
+
+
+	.expert-item-info
+		text-align: center
+		font-size: 22px
+		font-family: 'PT Serif'
+		font-weight: normal
+		transition: all .3s ease
+	.expert-item-img
+		margin-bottom: 25px
+		overflow: hidden
+		font-size: 0
+		img
+			transition: all .3s ease
+			width: 100%
+
+.s-employee-wrap
+	justify-content: space-between
+.s-employee-content
+	.sect-title
+		font-size: 57px
+		letter-spacing: 0.04em
+		font-family: 'PT Serif'
+		font-weight: normal
+		margin-bottom: 10px
+
+.featured-wrap
+	position: relative
+	max-width: 960px
+
+.featured-img-wrap
+	position: relative
+	margin-bottom: 50px
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		background-image: linear-gradient( 180deg, rgba(238,238,238,0) 0%, rgba(0,0,0,0.63922) 100%)
+.featured-img-text
+	position: absolute
+	bottom: 7%
+	color: #fff
+	font-size: 40px
+	text-align: center
+	padding: 0 6.5em
+
+.s-employee-content
+	width: 60%
+.s-option-aside
+	width: 30%
+
+
+.aside-filter
+	.filter-block
+		.filter-block-title
+			font-family: 'PT Serif'
+			font-weight: normal
+			font-size: 56px
+			margin-bottom: 16px
+		.filter-links
+			margin-bottom: 17px
+		.li
+			max-width: 435px
+			margin-bottom: 10px
+			a
+				width: 100%
+				display: inline-block
+				font-size: 35px
+				border: 2px solid #47545e
+				border-radius: 15px
+				padding: 5px 20px
+				&:hover
+					border-color: #ee463a
+					background: #ee463a
+					color: #fff
+
+.aside-content-area
+	background: #47545e
+	padding: 55px 34px 80px
+
+.content-area-block
+	color: #fff
+	margin-bottom: 100px
+	a
+		color: #fff
+	ul
+		list-style-type: disc
+		padding-inline-start: 24px
+		li
+			font-size: 25px
+			margin-bottom: 8px
+
+.content-area-title
+	font-family: 'PT Serif'
+	font-weight: normal
+	font-size: 50px
+	margin-bottom: 13px
+
+.js-show-more
+	border: 4px solid #ee463a
+	color: #ee463a
+	font-size: 30px
+	border-radius: 15px
+	background: transparent
+	padding: 4px 19px
+	min-width: 198px	
+	transition: all .3s ease
+	&:focus
+		outline: none
+	&:hover
+		background: #ee463a
+		color: #fff
+
+.aside-filter
+	margin-bottom: 70px
+
+.role-field
+	font-size: 40px
+	margin-bottom: 43px
+	.contact-info
+		align-items: baseline
+		.tel
+			&::after
+				content: ''
+				display: inline-block
+				width: 2px
+				height: 33px
+				background: #282f35
+				margin: 0 25px
+		.soc-link
+			margin-inline-start: 14px
+			&:hover
+				opacity: .7
+			img
+				transition: all .3s ease
+				
+
+		.tel a:hover,
+		.e-link a:hover
+			color: #ee463a
+
+.e-content-box
+	margin-bottom: 95px
+	p
+		font-size: 23px
+		color: #727476
+	.h2
+		margin-bottom: 15px
+
+.acf-links
+	.h2
+		margin-bottom: 18px
+	ul
+		list-style-type: disc
+		padding-inline-start: 57px
+		li
+			font-size: 25px
+			margin-bottom: 6px
+			a:hover
+				color: #ee463a
+.s-employee
+	padding-bottom: 67px
+
+.s-personnel,
+.s-search
+	margin-top: -65px
+
+.s-ranking-inner
+	.r-item
+		display: block
+
+.personel-slider .swiper-pagination-bullet-active
+	background: #ee463a !important	
+
+.personnel-card-wrap
+	//flex-wrap: wrap
+	padding: 65px 0
+
+.partners-slider
+	margin-bottom: 45px
+
+.partner-item
+	padding: 0 22px
+
+.js-slider-container
+	position: relative
+	width: 100%
+	max-width: 1190px
+
+.accordion-item
+	position: relative
+	color: #fff
+	padding-bottom: 80px
+		
+
+.f-accordion .accordion-item:nth-last-child(1)
+	padding-bottom: 125px
+.a-content
+	display: none
+.a-icon
+	width: 22px
+	height: 22px
+	position: absolute
+	inset-inline-end: 143px
+	top: 5px
+	&:before,
+	&:after
+		content: ''
+		width: 22px
+		height: 6px
+		background: #fffde7
+		position: absolute
+		left: 50%
+		top: 50%
+		transition: all .3s ease
+	&:before
+		transform: translate(-50%, -50%)
+	&:after
+		transform: translate(-50%, -50%) rotate(90deg)
+	&:hover
+		cursor: pointer
+		
+
+.accordion-item.active .a-icon:after
+	width: 0
+		
+
+.s-faqs
+	background: #282f35
+	font-size: 25px
+.a-title
+	color: #fff
+	&:hover
+		cursor: pointer
+
+.a-heading
+	position: relative
+	padding-inline-end: 270px
+
+.a-content
+	margin-top: 40px
+	padding-top: 24px
+	border-top: 3px solid #ee463a
+
+.p-aside-content
+	background: #d8d8d8
+	padding-top: 23px
+	padding-bottom: 23px
+	ul
+		padding-inline-start: 118px
+		padding-inline-end: 15px
+		list-style-type: disc
+		font-size: 25px
+		color: #47545e
+		li
+			margin-bottom: 19px
+			transition: all .3s ease
+			padding-inline-start: 14px
+			width: fit-content
+			&:hover
+				color: #ee463a
+			a:hover
+				color: #ee463a
+.p-content-title
+	font-family: 'PT Serif'
+	margin-bottom: 5px
+	h1
+		font-size: 60px	
+		font-weight: normal
+	h2
+		font-size: 56px
+		font-weight: normal
+
+.p-content-post
+	font-size: 25px
+	color: #727476
+	line-height: 1.36
+.p-content-img-wrap
+	margin-bottom: 16px
+
+.p-wrap
+	justify-content: space-between
+.p-content
+	width: 60%
+.p-aside
+	width: 30%
+
+.s-practice-areas
+	padding-bottom: 100px
+
+.btn-wrap
+	text-align: center
+
+.btn-more-orange
+	background: #ee463a
+	outline: none
+	border: none
+	color: #fff
+	font-family: 'PT Sans Narrow'
+	font-weight: bold
+	font-size: 22px
+	letter-spacing: 0.1em
+	border-radius: 23px
+	min-width: 315px
+	padding: 19px 20px
+	transition: all .3s ease
+	margin: 0 auto 60px
+	&:hover
+		background: #e22113
+		box-shadow: 0px 0px 7px #ed4539
+		
+
+.o-experts
+	.name
+		font-family: 'PT Serif'
+		font-weight: bold
+
+.s-faqs
+	padding-top: 76px
+	.btn-more-orange
+		margin: 45px auto 116px
+	.h2
+		font-size: 60px
+		text-align: center
+		margin-bottom: 65px
+
+.r-article-item	
+	color: #fffde7
+	text-align: center
+	width: 25%
+	//margin-bottom: 20px
+	padding: 0 10px
+
+.a-descr
+	font-size: 25px
+	margin-bottom: 30px
+
+.a-btn
+	color: #fffde7
+	font-size: 27px
+	font-family: 'PT Sans Narrow'
+	font-weight: bold
+	&:hover
+		color: #ee463a
+
+.r-article-title
+	font-family: 'PT Serif'
+	font-size: 40px
+	margin-bottom: 12px
+	line-height: 1.1
+
+.s-articles 
+	padding-top: 80px
+	.h2
+		text-align: center
+		margin-bottom: 55px
+
+.r-articles-wrap
+	flex-wrap: wrap
+	margin: 0 -10px	
+	padding-bottom: 20px
+
+.s-articles
+	.btn-more-orange
+		margin: 20px auto 50px
+
+.r-article-item:not(:nth-child(3n+1))
+	margin-inline-start: 12%
+
+.r-article-item:nth-child(n+4)
+	margin-top: 40px
+.s-practice-areas
+	.p-aside-content-title
+		display: none
+
+.aside-search
+	max-width: 375px
+	position: relative
+	margin: 0 auto 20px
+	.input
+		border: none
+		background: #47545e
+		color: #fff
+		font-size: 25px
+		padding-top: 12px
+		padding-bottom: 12px
+		padding-inline-start: 70px
+		border-radius: 23px
+		position: relative	
+	.btn-search
+		position: absolute
+		top: 10px
+		inset-inline-start: 20px
+
+.aside-search input::-webkit-input-placeholder 
+  	color: #fff
+  	text-align: end
+
+.aside-search input:-ms-input-placeholder 
+	color: #fff
+	text-align: end
+
+.aside-search input::-moz-placeholder 
+	color: #fff
+	text-align: end
+
+.p-aside-content
+	.h2
+		margin-bottom: 12px
+		padding-inline-start: 52px
+
+.faqs-off
+	position: relative
+	width: 775px
+	height: 1110px
+	display: flex
+	align-items: center
+	justify-content: center
+	img
+		position: absolute
+		display: block
+		//width: 775px
+		height: auto
+		max-width: 100%
+		//object-fit: cover
+		top: 0
+		left: 0
+
+.faqs-text
+	font-size: 60px
+	font-family: 'PT Serif'
+	font-weight: normal
+	letter-spacing: 0.04em
+	position: relative
+
+.s-choose
+	.p-content
+		padding-top: 30px
+	.p-aside-content
+		display: flex
+		flex-direction: column
+		ul
+			order: 3
+		.aside-search
+			order: 2
+
+.faqs-on
+	margin-top: 87px
+	.accordion-item
+		color: #000
+		font-size: 25px
+		padding-bottom: 40px
+	.a-title
+		color: #000
+	.a-icon:before, 
+	.a-icon:after
+		background: #ee463a
+	.a-heading
+		padding-inline-start: 60px
+		padding-inline-end: 90px
+	.a-icon
+		inset-inline-start: 18px
+		inset-inline-end: 0
+
+	.a-content
+		margin-inline-start: 60px
+		padding-inline-end: 115px
+
+.cap-letter
+	margin-inline-end: 7px
+
+.top-bar
+	background: #282f35
+	padding-top: 15px
+	padding-bottom: 30px
+	padding-left: 15px
+	padding-right: 15px
+	ul
+		display: flex
+		justify-content: center
+		font-size: 28px
+		flex-wrap: wrap
+	li
+		margin-inline-start: 9px
+		&:after
+			content: ''
+			display: inline-block
+			background: #fff
+			width: 1px
+			height: 22px
+			margin-inline-start: 9px
+	a
+		color: #fff
+		&:hover
+			color: #ee463a
+.current-item
+	color: #ee463a
+	a
+		color: #ee463a
+
+.top-bar li:last-child:after
+	display: none
+
+.s-article-wrap
+	justify-content: space-between
+.s-article-content
+	width: 60%
+
+.article-video-block
+	position: relative
+.play-btn
+	position: absolute
+	display: block
+	margin: auto
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	cursor: pointer
+	transition: all .3s ease
+	&:hover
+		opacity: .85
+
+.r-article-body
+	display: flex
+	flex-direction: column
+	flex-grow: 1
+	justify-content: space-between
+
+.r-article-item
+	display: flex
+	flex-direction: column
+
+.aticle-nav
+	margin: 90px 0
+
+.article-info-wrap
+	.h1
+		font-size: 67px
+		margin-bottom: 7px
+.article-info
+	display: flex
+
+.article-date
+	&:before
+		content: ''
+		display: inline-block
+		background: #000
+		width: 1px
+		height: 21px
+		margin: 0 9px
+
+.a-wrap
+	display: flex
+	font-size: 25px
+	justify-content: space-between
+	align-items: baseline
+	margin-bottom: 40px
+
+.article-info-wrap
+	width: 60%
+
+.article-share
+	span
+		margin-inline-end: 30px
+
+	a
+		margin-inline-start: 13px
+		&:hover
+			opacity: .7
+
+
+.autor-avatar-wrap
+	width: 100%
+	height: 460px
+	//height: 100%
+	margin-bottom: 25px
+	img
+		display: block
+		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: top center
+.s-autor-block
+	width: 30%
+	.role-field
+		font-size: 56px
+		line-height: 1
+		margin-bottom: 20px
+
+.autor-name
+	font-size: 74px
+	color: #e2211c
+	letter-spacing: 0.04em
+	font-family: 'PT Serif'
+	font-weight: normal
+	line-height: 1
+
+.snippet-text
+	font-size: 36px
+	padding-inline-end: 90px
+	letter-spacing: 0.02em
+
+.bold-text
+	font-size: 56px
+	margin-bottom: 35px
+	letter-spacing: 0.01em
+	font-family: 'PT Serif'
+	font-weight: normal
+
+.s-article
+	padding-bottom: 100px
+	p
+		font-size: 25px
+		margin-bottom: 45px
+
+.s-article-wrap
+	margin-bottom: 75px
+
+.k-article-img-wrap
+	width: 37%
+	img
+		display: block
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+.k-article
+	margin-bottom: 50px
+.k-article-body
+	background: #47545e
+	color: #fff
+	font-size: 25px
+	width: 63%
+	letter-spacing: 0.01em
+	padding: 36px 90px
+	h2
+		font-family: 'PT Serif'
+		font-weight: normal
+		font-size: 40px
+	.article-date:before
+		background: #fff
+	.article-info
+		margin-bottom: 14px
+	.article-descr
+		margin-bottom: 25px
+
+.s-knowledge-articles
+	padding-bottom: 40px
+	.aside-search
+		margin: 0 0 50px
+
+.inner-article-nav
+	margin-bottom: 50px
+
+.data-title
+	.h1
+		font-size: 60px
+		margin-bottom: 23px
+		letter-spacing: 0.04em
+
+.s-autor-block-mobile
+	display: none
+
+.s-article
+	.article-date:before
+		display: none
+
+.s-contacts
+	.cf-wrap
+		width: 30%
+	.aside-cf-body
+		width: 100%
+		max-width: 100%
+		margin-bottom: 50px
+		position: static
+		transform: translateX(0)
+		padding: 0
+		max-height: 100%
+		background: inherit
+		color: #727476
+	.aside-cf-wrap form .input, 
+	.aside-cf-wrap form textarea
+		background: #47545e
+		color: #d2d5d7
+	.aside-cf-wrap form .input
+		height: 88px
+	.aside-cf-wrap form textarea
+		height: 280px
+	.aside-cf-wrap form .btn
+		background: #ee463a
+		height: 88px
+	.aside-cf-title
+		color: #ee463a
+
+	input::-webkit-input-placeholder 
+  		color: #d2d5d7
+	input:-ms-input-placeholder 
+		color: #d2d5d7
+	input::-moz-placeholder 
+		color: #d2d5d7
+	textarea::-webkit-input-placeholder 
+		color: #d2d5d7
+	textarea:-ms-input-placeholder 
+		color: #d2d5d7
+	textarea::-moz-placeholder 
+		color: #d2d5d7
+
+.c-info-item
+	margin-bottom: 5px
+	h3
+		font-family: 'PT Serif'
+		font-weight: bold
+		font-size: 40px
+		margin-bottom: 7px
+
+.c-info-block
+	font-size: 40px
+	color: #47545e
+	a
+		color: #47545e
+		&:hover
+			color: #f4856d
+
+.phone-dir
+	display: inline-block
+	direction: ltr
+
+.aside-social
+	margin-top: 30px
+	display: flex
+	align-items: baseline
+	a
+		margin-inline-end: 25px
+		&:hover
+			opacity: .7
+
+.office-name
+	font-size: 35px
+	margin-bottom: 20px
+
+.s-contacts-wrap 
+	justify-content: space-between
+
+
+.map
+	background: #d8d8d8
+	width: 100%
+	height: 812px	
+	margin-bottom: 40px
+.maps-wrap
+	width: 60%
+	padding-top: 105px
+
+.address-details
+	font-family: 'PT Sans Narrow'
+	font-weight: bold
+	color: #727476
+	font-size: 25px
+	width: 25%
+
+.address-details-wrap
+	display: flex
+	justify-content: space-between
+
+.map-wrap
+	margin-bottom: 50px
+
+.s-contacts
+	padding-bottom: 60px
+
+.s-reviews
+	.h2
+		color: #000
+
+.s-reviews.s-dark
+	.h2
+		color: #fff
+.s-reviews
+	.h2.red
+		color: #ee463a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			 
+
+
+
+
+			
+
+	
+
+
+
+
+
+
+
+
+
+@import "media" // Always at the end
